@@ -1,11 +1,14 @@
+# i wish they would stop updating translations after a release
+%define checkout e1e674bb9c129e65b2171f93add2f3ac3e170d88
+
 Name: moblin-panel-pasteboard
 Summary: Pasteboard panel for Moblin
 Group: Graphical desktop/Other 
-Version: 0.0.2
+Version: 0.0.3
 License: LGPL 2.1
 URL: http://www.moblin.org
-Release: %mkrel 2
-Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
+Release: %mkrel 1
+Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{checkout}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: clutter-devel
@@ -20,7 +23,7 @@ BuildRequires: gnome-common
 Moblin pasteboard panel
 
 %prep
-%setup -q 
+%setup -q -n %{name}-%{checkout}
 
 %build
 NOCONFIGURE=nil ./autogen.sh
