@@ -6,7 +6,7 @@ Summary: Pasteboard panel for Moblin
 Group: Graphical desktop/Other 
 Version: 0.0.3
 License: LGPL 2.1
-URL: http://www.moblin.org
+URL: https://www.moblin.org
 Release: %mkrel 2
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{checkout}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
